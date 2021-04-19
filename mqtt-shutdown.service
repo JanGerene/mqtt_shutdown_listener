@@ -1,0 +1,16 @@
+[Unit]
+Description=MQTT listener for shutdown 
+Wants=network-online.target
+After=network.target network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/home/pi/mqtt_shutdown_listener.py
+
+[Install]
+WantedBy=multi-user.target
+
