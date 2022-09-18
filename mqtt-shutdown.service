@@ -9,8 +9,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/home/pi/mqtt_shutdown_listener.py
+ExecStart=/home/jan/mqtt_shutdown_listener.py
 
 [Install]
 WantedBy=multi-user.target
-
